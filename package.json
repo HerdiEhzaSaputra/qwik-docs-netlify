@@ -20,7 +20,7 @@
     "ssg": "node server/entry.static",
     "start": "vite --open --mode ssr",
     "qwik": "qwik",
-    "production": "qwik build && node server/entry.static"
+    "production": "qwik build.static && qwik build && node server/entry.static"
   },
   "devDependencies": {
     "@builder.io/qwik": "0.11.1",
