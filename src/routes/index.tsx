@@ -1,9 +1,11 @@
 import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
+import { Counter } from '~/components/Counter';
 
 export default component$(() => {
   return (
     <>
+      <Counter />
       <h1>Welcome to Qwik Docs Starter</h1>
 
       <ul>
