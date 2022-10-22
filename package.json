@@ -19,7 +19,8 @@
     "preview": "qwik build preview && vite preview --open",
     "ssg": "node server/entry.static",
     "start": "vite --open --mode ssr",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "production": "qwik build && node server/entry.static"
   },
   "devDependencies": {
     "@builder.io/qwik": "0.11.1",
