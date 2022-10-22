@@ -7,7 +7,7 @@ export default component$(() => {
             <div class="mx-auto h-full md:w-10/12 lg:w-6/12">
                 <div class="m-auto  py-12 sm:p-20 xl:w-10/12">
                     <div class="space-y-4">
-                        <a href="">
+                        <a href="/">
                             <img src="images/tailus.svg" class="w-40 dark:hidden" alt="tailus logo"></img>
                             <img src="images/logo.svg" class="w-40 hidden dark:block" alt="tailus logo"></img>
                         </a>

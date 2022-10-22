@@ -20,6 +20,7 @@
     "ssg": "node server/entry.static",
     "start": "vite --open --mode ssr",
     "qwik": "qwik",
+    "rm": "rm -rf node_modules",
     "production": "npm run build && node server/entry.static"
   },
   "devDependencies": {

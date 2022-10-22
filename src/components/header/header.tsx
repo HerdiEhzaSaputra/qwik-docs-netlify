@@ -58,19 +58,23 @@ export default component$(() => {
 
                   <ul class="border-t space-y-2 pt-2 lg:space-y-0 lg:space-x-2 lg:pt-0 lg:pl-2 lg:border-t-0 lg:border-l lg:items-center lg:flex">
                     <li>
-                      <button type="button" title="Start buying" class="w-full py-3 px-6 rounded-md text-center transition active:bg-sky-200 focus:bg-sky-100 sm:w-max">
-                        <span class="block text-cyan-600 font-semibold">
-                          Sign in
-                        </span>
-                      </button>
+                      <a href="/auth/sign-in">
+                        <button type="button" title="Start buying" class="w-full py-3 px-6 rounded-md text-center transition active:bg-sky-200 focus:bg-sky-100 sm:w-max">
+                          <span class="block text-cyan-600 font-semibold">
+                            Sign in
+                          </span>
+                        </button>
+                      </a>
                     </li>
 
                     <li>
-                      <button type="button" title="Start buying" class="w-full py-3 px-6 rounded-md text-center transition bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 focus:bg-sky-600 sm:w-max">
-                        <span class="block text-white font-semibold">
-                          Try it for free
-                        </span>
-                      </button>
+                      <a href="/auth/sign-up">
+                        <button type="button" title="Start buying" class="w-full py-3 px-6 rounded-md text-center transition bg-cyan-500 hover:bg-cyan-600 active:bg-cyan-700 focus:bg-sky-600 sm:w-max">
+                          <span class="block text-white font-semibold">
+                            Try it for free
+                          </span>
+                        </button>
+                      </a>
                     </li>
                   </ul>
                 </div>

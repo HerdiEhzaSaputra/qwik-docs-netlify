@@ -1,18 +1,18 @@
 import { component$, Slot } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import Footer from '~/components/footer/footer';
-import Header from '~/components/header/header';
+import Navbar from '~/components/dashboard/navbar/navbar'
+import Sidebar from '~/components/dashboard/sidebar/sidebar';
 
 export default component$(() => {
 
   return (
-    <>
-      <Header/>
-      <main class="pt-[6.5rem] pb-20 md:pt-[5rem]">
+    <div>
+      <Sidebar />
+        <div class="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
+          <Navbar/>
           <Slot />
-      </main>
-      <Footer/>
-    </>
+        </div>
+    </div>
   );
 });
 
