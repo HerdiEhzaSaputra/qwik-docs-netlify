@@ -3,55 +3,80 @@ import { useContent, Link, useLocation } from '@builder.io/qwik-city';
 
 export default component$(() => {
 
-    const { menu } = useContent();
+                           const { menu, headings } = useContent();
+
+    const contentmMenu = headings?.filter((h) => h.level === 2) || [];
+    const contentmMenuChild = headings?.filter((h) => h.level === 3) || [];
     const loc = useLocation();
-    const { pathname } = useLocation();
 
     return (
         <>
-            {
-                menu
-                    ? menu.items?.map((item) => (
-                        <>
-                            <ul class="space-y-2 tracking-wide mt-8">
+            {menu
+                ? menu.items?.map((item) => (
+                    <>
+                        <li class="mt-4">
+                            <button type="button" 
+                                class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" 
+                                aria-controls={item.text} 
+                                data-collapse-toggle={item.text}
+                            >
+                                <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>{item.text}</span>
+                                <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                            </button>
+                            <ul id={item.text} class="hidden py-2 space-y-2">
+                                {item.items?.map((item) => (
+                                    <>
+                                        <button type="button" 
+                                            class="flex items-center p-2 w-full text-base font-normal text-gray-900 rounded-lg transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700" 
+                                            aria-controls={item.text} 
+                                            data-collapse-toggle={item.text}
+                                        >
+                                            <span class="flex-1 ml-3 text-left whitespace-nowrap" sidebar-toggle-item>{item.text}</span>
+                                            <svg sidebar-toggle-item class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                                        </button>
+                                        <ul id={item.text} class="hidden py-2 space-y-2">
+                                            {item.items?.map((item) => (
+                                                    <li>
+                                                        <Link
+                                                            class={(loc.pathname === item.href ? 'block border-l pl-4 -ml-px text-sky-500 border-current font-semibold dark:text-sky-400' : 'block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300')}
+                                                            href={item.href}
+                                                        >
+                                                            {item.text}
+                                                        </Link>
+                                                    </li>
+                                            ))}
+                                        </ul>
+                                    </>
+                                ))}
+                            </ul>
+                            {/* <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
                                 {item.items?.map((item) => (
                                     <li>
                                         <Link
+                                            class={(loc.pathname === item.href ? 'block border-l pl-4 -ml-px text-sky-500 border-current font-semibold dark:text-sky-400' : 'block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300')}
                                             href={item.href}
-                                            aria-label={item.href}                                                                                                                                                            
-                                            class={(loc.pathname === item.href ? 'relative px-4 py-3 flex items-center space-x-4 rounded-xl text-white bg-gradient-to-r from-sky-600 to-cyan-400' : 'px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group')}
-                                            // class={{
-                                            //     'relative px-4 py-3 flex items-center space-x-4 rounded-xl text-white bg-gradient-to-r from-sky-600 to-cyan-400': loc.pathname === item.href, 'px-4 py-3 flex items-center space-x-4 rounded-md text-gray-600 group': !pathname.startsWith(item.href),
-                                            // }}
                                         >
-                                            <svg class="-ml-1 h-6 w-6" viewBox="0 0 24 24" fill="none">
-                                                <path d="M6 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8ZM6 15a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-1Z" class="fill-current text-cyan-400 dark:fill-slate-600"></path>
-                                                <path d="M13 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2V8Z" class="fill-current text-cyan-200 group-hover:text-cyan-300"></path>
-                                                <path d="M13 15a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-1Z" class="fill-current group-hover:text-sky-300"></path>
-                                            </svg>
-                                            <span
-                                                class={(loc.pathname === item.href ? '-mr-1 font-medium' : 'group-hover:text-gray-700')}
-                                            >{item.text}</span>
+                                            {item.text}
                                         </Link>
+                                        <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
+                                            {item.items?.map((item) => (
+                                                <li>
+                                                    <Link
+                                                        class={(loc.pathname === item.href ? 'block border-l pl-4 -ml-px text-sky-500 border-current font-semibold dark:text-sky-400' : 'block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300')}
+                                                        href={item.href}
+                                                    >
+                                                        {item.text}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </li>
-
                                 ))}
-                            </ul>
-                        </>
-                    ))
-                    : null
-            }
-
-            {/* <li>
-                <a href="#" aria-label="dashboard" class="relative px-4 py-3 flex items-center space-x-4 rounded-xl text-white bg-gradient-to-r from-sky-600 to-cyan-400">
-                    <svg class="-ml-1 h-6 w-6" viewBox="0 0 24 24" fill="none">
-                        <path d="M6 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V8ZM6 15a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2v-1Z" class="fill-current text-cyan-400 dark:fill-slate-600"></path>
-                        <path d="M13 8a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2V8Z" class="fill-current text-cyan-200 group-hover:text-cyan-300"></path>
-                        <path d="M13 15a2 2 0 0 1 2-2h1a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-1Z" class="fill-current group-hover:text-sky-300"></path>
-                    </svg>
-                    <span class="-mr-1 font-medium">Dashboard</span>
-                </a>
-            </li> */}
+                            </ul> */}
+                        </li>
+                    </>
+                ))
+                : null}
         </>
     );
 });
