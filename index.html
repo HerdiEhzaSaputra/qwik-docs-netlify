@@ -1,0 +1,421 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+    <title>Spinal docs</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="flex h-screen overflow-hidden">
+
+        <aside
+            class="fixed top-[3.5rem] w-64 h-screen shadow-xl px-4 left-0 hidden peer-checked:block lg:relative lg:top-0 lg:h-auto lg:px-0 lg:block lg:flex-none lg:shadow-none">
+            <div class="absolute inset-y-0 right-0 w-full lg:w-[50vw] bg-white lg:bg-slate-50"></div>
+
+            <nav class="sticky top-[4.5rem] text-base lg:text-sm">
+                <ul role="list" class="h-[calc(100vh-4.5rem)] overflow-y-auto py-7 pl-0.5 space-y-8 px-4">
+                    <li class="mt-12 lg:mt-8">
+                        <h5 class="mb-8 lg:mb-3 font-semibold text-slate-900 dark:text-slate-200">Core Concepts</h5>
+                        <ul class="space-y-6 lg:space-y-2 border-l border-slate-100 dark:border-slate-800">
+                            <li>
+                                <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
+                                    href="/docs/utility-first">
+                                    Utility-First Fundamentals
+                                </a>
+                            </li>
+                            <li>
+                                <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
+                                    href="/docs/hover-focus-and-other-states">
+                                    Hover, Focus, and Other States
+                                </a>
+                            </li>
+                            <li>
+                                <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
+                                    href="/docs/responsive-design">
+                                    Responsive Design
+                                </a>
+                            </li>
+                            <li>
+                                <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
+                                    href="/docs/dark-mode">
+                                    Dark Mode
+                                </a>
+                            </li>
+                            <li>
+                                <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
+                                    href="/docs/reusing-styles">
+                                    Reusing Styles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
+                                    href="/docs/adding-custom-styles">
+                                    Adding Custom Styles
+                                </a>
+                            </li>
+                            <li>
+                                <a class="block border-l pl-4 -ml-px border-transparent hover:border-slate-400 dark:hover:border-slate-500 text-slate-700 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"
+                                    href="/docs/functions-and-directives">
+                                    Functions &amp; Directives
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3 class="font-semibold tracking-tight text-slate-900">
+                            Getting started
+                        </h3>
+
+                        <ul role="list" class="pl-3 mt-3 space-y-2">
+                            <li>
+                                <a href="#" class="text-slate-600 hover:text-slate-800">
+                                    Quick start guide
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-slate-900 hover:text-slate-800">
+                                    How does Spinal work?
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h3 class="font-semibold tracking-tight text-slate-900">
+                            Content Types
+                        </h3>
+
+                        <ul role="list" class="pl-3 mt-3 space-y-2">
+                            <li>
+                                <a href="#" class="text-slate-600 hover:text-slate-800">
+                                    What are content types?
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-slate-600 hover:text-slate-800">
+                                    Create and edit content types
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li>
+                        <h3 class="font-semibold tracking-tight text-slate-900">
+                            Content
+                        </h3>
+
+                        <ul role="list" class="pl-3 mt-3 space-y-2">
+                            <li>
+                                <a href="#" class="text-slate-600 hover:text-slate-800">
+                                    What kind of content can I create and edit?
+                                </a>
+                            </li>
+
+                            <li>
+                                <a href="#" class="text-slate-600 hover:text-slate-800">
+                                    Previewing content
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="relative flex flex-col flex-1 overflow-y-auto overflow-x-hidden">
+            <label for="navigation"
+                class="fixed bottom-0 left-0 z-50 flex items-center justify-center w-12 h-12 mb-4 ml-4 bg-white border rounded-full shadow-lg cursor-pointer text-slate-600 border-slate-300 lg:hidden transition duration-200 ease-in-out active:scale-95">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 8h16M4 16h16" />
+                </svg>
+            </label>
+
+            <input type="checkbox" name="navigation" id="navigation" class="hidden peer" />
+
+            <header
+                class="sticky top-0 z-50 w-full flex items-center justify-between px-3 py-2 bg-white">
+
+                <div class="relative" data-headlessui-state="open"><button
+                        class="text-xs leading-5 font-semibold bg-slate-400/10 rounded-full py-1 px-3 flex items-center space-x-2 hover:bg-slate-400/20 dark:highlight-white/5"
+                        id="headlessui-menu-button-6" type="button" aria-haspopup="true" aria-expanded="true"
+                        data-headlessui-state="open" aria-controls="headlessui-menu-items-7">v3.2.0<svg width="6"
+                            height="3" class="ml-2 overflow-visible" aria-hidden="true">
+                            <path d="M0 0L3 3L6 0" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round"></path>
+                        </svg></button>
+                    <div class="absolute top-full mt-1 py-2 w-40 rounded-lg bg-white shadow ring-1 ring-slate-900/5 text-sm leading-6 font-semibold text-slate-700 dark:bg-slate-800 dark:text-slate-300 dark:highlight-white/5"
+                        aria-labelledby="headlessui-menu-button-6" id="headlessui-menu-items-7" role="menu" tabindex="0"
+                        data-headlessui-state="open"><span
+                            class="flex items-center justify-between px-3 py-1 text-sky-500 dark:text-sky-400"
+                            id="headlessui-menu-item-57" role="menuitem" aria-disabled="true"
+                            data-headlessui-state="disabled">v3.2.0<svg width="24" height="24" fill="none"
+                                aria-hidden="true">
+                                <path d="m7.75 12.75 2.25 2.5 6.25-6.5" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg></span><a href="https://v2.tailwindcss.com" class="block px-3 py-1"
+                            id="headlessui-menu-item-58" role="menuitem" tabindex="-1"
+                            data-headlessui-state="">v2.2.19</a><a href="https://v1.tailwindcss.com"
+                            class="block px-3 py-1" id="headlessui-menu-item-59" role="menuitem" tabindex="-1"
+                            data-headlessui-state="">v1.9.6</a><a href="https://tailwindcss-v0.netlify.app/"
+                            class="block px-3 py-1" id="headlessui-menu-item-60" role="menuitem" tabindex="-1"
+                            data-headlessui-state="">v0.7.4</a></div>
+                </div>
+
+                <div class="flex right-0">
+                    <div class="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800 mr-12">
+                        <label class="sr-only" id="headlessui-listbox-label-8"
+                            data-headlessui-state="">Theme</label><button type="button" id="headlessui-listbox-button-9"
+                            aria-haspopup="true" aria-expanded="false" data-headlessui-state=""
+                            aria-labelledby="headlessui-listbox-label-8 headlessui-listbox-button-9"><span
+                                class="dark:hidden"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                    <path d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+                                        class="stroke-slate-400 dark:stroke-slate-500"></path>
+                                    <path
+                                        d="M12 4v1M17.66 6.344l-.828.828M20.005 12.004h-1M17.66 17.664l-.828-.828M12 20.01V19M6.34 17.664l.835-.836M3.995 12.004h1.01M6 6l.835.836"
+                                        class="stroke-slate-400 dark:stroke-slate-500"></path>
+                                </svg></span><span class="hidden dark:inline"><svg viewBox="0 0 24 24" fill="none"
+                                    class="w-6 h-6">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M17.715 15.15A6.5 6.5 0 0 1 9 6.035C6.106 6.922 4 9.645 4 12.867c0 3.94 3.153 7.136 7.042 7.136 3.101 0 5.734-2.032 6.673-4.853Z"
+                                        class="fill-transparent"></path>
+                                    <path
+                                        d="m17.715 15.15.95.316a1 1 0 0 0-1.445-1.185l.495.869ZM9 6.035l.846.534a1 1 0 0 0-1.14-1.49L9 6.035Zm8.221 8.246a5.47 5.47 0 0 1-2.72.718v2a7.47 7.47 0 0 0 3.71-.98l-.99-1.738Zm-2.72.718A5.5 5.5 0 0 1 9 9.5H7a7.5 7.5 0 0 0 7.5 7.5v-2ZM9 9.5c0-1.079.31-2.082.845-2.93L8.153 5.5A7.47 7.47 0 0 0 7 9.5h2Zm-4 3.368C5 10.089 6.815 7.75 9.292 6.99L8.706 5.08C5.397 6.094 3 9.201 3 12.867h2Zm6.042 6.136C7.718 19.003 5 16.268 5 12.867H3c0 4.48 3.588 8.136 8.042 8.136v-2Zm5.725-4.17c-.81 2.433-3.074 4.17-5.725 4.17v2c3.552 0 6.553-2.327 7.622-5.537l-1.897-.632Z"
+                                        class="fill-slate-400 dark:fill-slate-500"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M17 3a1 1 0 0 1 1 1 2 2 0 0 0 2 2 1 1 0 1 1 0 2 2 2 0 0 0-2 2 1 1 0 1 1-2 0 2 2 0 0 0-2-2 1 1 0 1 1 0-2 2 2 0 0 0 2-2 1 1 0 0 1 1-1Z"
+                                        class="fill-slate-400 dark:fill-slate-500"></path>
+                                </svg></span></button><a href="https://github.com/tailwindlabs/tailwindcss"
+                            class="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"><span
+                                class="sr-only">Tailwind CSS on GitHub</span><svg viewBox="0 0 16 16" class="w-5 h-5"
+                                fill="currentColor" aria-hidden="true">
+                                <path
+                                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z">
+                                </path>
+                            </svg></a></div>
+
+                    <div class="w-64 bg-white dark:bg-slate-900 relative pointer-events-auto">
+                        <button type="button"
+                            class="hidden w-full lg:flex items-center text-sm leading-6 text-slate-400 rounded-md ring-1 ring-slate-900/10 shadow-sm py-1.5 pl-2 pr-3 hover:ring-slate-300 dark:bg-slate-800 dark:highlight-white/5 dark:hover:bg-slate-700"><svg
+                                width="24" height="24" fill="none" aria-hidden="true" class="mr-3 flex-none">
+                                <path d="m19 19-3.5-3.5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                                <circle cx="11" cy="11" r="6" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round"></circle>
+                            </svg>Quick search...<span class="ml-auto pl-3 flex-none text-xs font-semibold">Ctrl
+                                K</span></button>
+                    </div>
+                </div>
+            </header>
+
+            <main class="flex">
+                <div class="flex-auto w-full max-w-2xl min-w-0 px-4 py-10 lg:max-w-none lg:pr-0 lg:pl-8 xl:px-16">
+                    <article class="">
+                        <header class="">
+                            <p class="text-base font-medium text-slate-500">
+                                Getting started
+                            </p>
+
+                            <h1 class="text-3xl font-bold tracking-tight text-slate-900">
+                                How does Spinal work?
+                            </h1>
+                        </header>
+
+                        <p class="mt-2 text-xl text-slate-600">
+                            Need to get started quickly with Spinal? You will learn all the basics in just minutes.
+                        </p>
+
+                        <div
+                            class="mt-8 prose prose-slate max-w-none prose-headings:font-semibold prose-headings:tracking-tight prose-lead:text-slate-500 prose-a:font-semibold prose-a:underline prose-pre:bg-slate-900">
+                            <h2>
+                                Humblebrag hammock swag
+                            </h2>
+
+                            <p>
+                                Humblebrag hammock swag, cardigan praxis yr vexillologist locavore activated charcoal.
+                                Offal
+                                paleo iPhone, DSA cronut wolf tote bag jianbing yes plz drinking vinegar. Chartreuse
+                                polaroid
+                                irony offal meggings cornhole crucifix, banh mi glossier taxidermy tattooed shabby chic
+                                hashtag
+                                cred. 8-bit hammock humblebrag, hot chicken post-ironic meditation farm-to-table cray
+                                everyday
+                                carry succulents franzen deep v mlkshk unicorn. Literally vexillologist salvia four
+                                dollar toast
+                                direct trade fixie vice. Typewriter mustache edison bulb, everyday carry DIY craft beer
+                                sartorial yr gastropub hot chicken pabst squid.
+                            </p>
+
+                            <h3>
+                                Paleo yuccie pickled fingerstache
+                            </h3>
+
+                            <p>
+                                Paleo yuccie pickled fingerstache. Lyft kale chips dreamcatcher kinfolk, hot chicken man
+                                braid
+                                semiotics iceland cold-pressed tattooed church-key vegan authentic hashtag twee. Small
+                                batch
+                                mustache chia sriracha irony PBR&B, brooklyn ethical truffaut. Pop-up tumeric ugh,
+                                kickstarter
+                                quinoa semiotics keffiyeh messenger bag air plant slow-carb. Chillwave selfies
+                                thundercats
+                                gochujang intelligentsia, marfa butcher forage single-origin coffee la croix coloring
+                                book
+                                try-hard cred listicle. Messenger bag everyday carry bicycle rights, art party kinfolk
+                                stumptown
+                                kickstarter green juice meh. Portland bespoke four dollar toast migas mumblecore fanny
+                                pack.
+                            </p>
+
+                            <h3>
+                                Selfies vegan microdosing aesthetic cardigan
+                            </h3>
+
+                            <p>
+                                Selfies vegan microdosing aesthetic cardigan. Raclette tofu narwhal fanny pack cred
+                                flannel.
+                                Chartreuse kale chips viral gentrify vape palo santo 90's. Actually activated charcoal
+                                meggings
+                                try-hard yuccie thundercats tumeric.
+                            </p>
+
+                            <h2>
+                                Pinterest twee flexitarian
+                            </h2>
+
+                            <p>
+                                Pinterest twee flexitarian keytar mixtape shaman chambray actually lomo humblebrag
+                                keffiyeh
+                                yuccie health goth. Edison bulb copper mug listicle cred tote bag swag migas blog yes
+                                plz
+                                humblebrag. Bespoke keffiyeh kale chips seitan hella. Pok pok chartreuse squid jean
+                                shorts small
+                                batch, dreamcatcher williamsburg raclette flexitarian yr crucifix. Salvia church-key
+                                prism,
+                                glossier shabby chic post-ironic retro everyday carry austin master cleanse sustainable.
+                                Gastropub kombucha yuccie, photo booth semiotics tumblr vaporware normcore drinking
+                                vinegar
+                                blog.
+                            </p>
+                        </div>
+                    </article>
+
+                    <dl class="flex pt-6 mt-6 border-t border-slate-200">
+                        <div class="mr-auto text-left">
+                            <dt class="text-sm font-normal tracking-tight text-slate-600">
+                                Previous
+                            </dt>
+
+                            <dd class="mt-1">
+                                <a href="#" class="text-base font-semibold text-slate-900 hover:underline">
+                                    Quick start guide
+                                </a>
+                            </dd>
+                        </div>
+
+                        <div class="ml-auto text-right">
+                            <dt class="text-sm font-normal tracking-tight text-slate-600">
+                                Next
+                            </dt>
+
+                            <dd class="mt-1">
+                                <a href="#" class="text-base font-semibold text-slate-900 hover:underline">
+                                    What are content types?
+                                </a>
+                            </dd>
+                        </div>
+                    </dl>
+                </div>
+                
+                <aside
+                    class="fixed top-[3.5rem] w-64 h-screen shadow-xl px-4 right-0 hidden peer-checked:block lg:relative lg:top-0 lg:h-auto lg:px-0 lg:block lg:flex-none lg:shadow-none">
+
+                    <nav class="sticky top-[4.5rem] text-base lg:text-sm">
+                        <div class="-ml-0.5 w-full h-[calc(100vh-4.5rem)] overflow-y-auto py-7 pl-0.5 space-y-8">
+                            <h5 class="text-slate-900 font-semibold mb-4 text-sm leading-6 dark:text-slate-100">On this
+                                page</h5>
+                            <ul class="text-slate-700 text-sm leading-6">
+                                <li><a href="#configuring-custom-screens"
+                                        class="block py-1 font-medium text-sky-500 dark:text-sky-400">Configuring
+                                        custom screens</a></li>
+                                <li class="ml-4"><a href="#overriding-the-defaults"
+                                        class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                                            width="3" height="24" viewBox="0 -9 3 24"
+                                            class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                            <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round"></path>
+                                        </svg>Overriding the defaults</a></li>
+                                <li class="ml-4"><a href="#overriding-a-single-screen"
+                                        class="group flex items-start py-1 text-sky-500 dark:text-sky-400"><svg
+                                            width="3" height="24" viewBox="0 -9 3 24"
+                                            class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                            <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round"></path>
+                                        </svg>Overriding a single screen</a></li>
+                                <li class="ml-4"><a href="#adding-larger-breakpoints"
+                                        class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                                            width="3" height="24" viewBox="0 -9 3 24"
+                                            class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                            <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round"></path>
+                                        </svg>Adding larger breakpoints</a></li>
+                                <li class="ml-4"><a href="#adding-smaller-breakpoints"
+                                        class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                                            width="3" height="24" viewBox="0 -9 3 24"
+                                            class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                            <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round"></path>
+                                        </svg>Adding smaller breakpoints</a></li>
+                                <li class="ml-4"><a href="#using-custom-screen-names"
+                                        class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                                            width="3" height="24" viewBox="0 -9 3 24"
+                                            class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                            <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round"></path>
+                                        </svg>Using custom screen names</a></li>
+                                <li><a href="#advanced-configuration"
+                                        class="block py-1 font-medium hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300">Advanced
+                                        configuration</a></li>
+                                <li class="ml-4"><a href="#max-width-breakpoints"
+                                        class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                                            width="3" height="24" viewBox="0 -9 3 24"
+                                            class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                            <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round"></path>
+                                        </svg>Max-width breakpoints</a></li>
+                                <li class="ml-4"><a href="#fixed-range-breakpoints"
+                                        class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                                            width="3" height="24" viewBox="0 -9 3 24"
+                                            class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                            <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round"></path>
+                                        </svg>Fixed-range breakpoints</a></li>
+                                <li class="ml-4"><a href="#multi-range-breakpoints"
+                                        class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                                            width="3" height="24" viewBox="0 -9 3 24"
+                                            class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                            <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round"></path>
+                                        </svg>Multi-range breakpoints</a></li>
+                                <li class="ml-4"><a href="#custom-media-queries"
+                                        class="group flex items-start py-1 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-300"><svg
+                                            width="3" height="24" viewBox="0 -9 3 24"
+                                            class="mr-2 text-slate-400 overflow-visible group-hover:text-slate-600 dark:text-slate-600 dark:group-hover:text-slate-500">
+                                            <path d="M0 0L3 3L0 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                                stroke-linecap="round"></path>
+                                        </svg>Custom media queries</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </aside>
+            </main>
+        </div>
+
+    </div>
+</body>
+</html>

@@ -5,7 +5,7 @@ export default component$(() => {
     return (
         <>
             <header
-                class="sticky top-0 z-50 w-full flex items-center justify-between px-3 py-2">
+                class="sticky top-0 z-50 w-full flex items-center justify-between px-3 py-2 bg-white">
 
                 <div class="relative" data-headlessui-state="open">
                     <button

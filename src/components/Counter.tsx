@@ -4,11 +4,8 @@ export const Counter = component$(() => {
   const store = useStore({ count: 0 });
 
   return (
-    <div>
-      <p>Count: {store.count}</p>
-      <p>
-        <button onClick$={() => store.count++}>Click</button>
-      </p>
-    </div>
+    <button class="counter" type="button" onClick$={() => store.count++}>
+      Increment {store.count}
+    </button>
   );
 });

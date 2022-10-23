@@ -16,6 +16,7 @@ export default component$(() => {
       <head>
         <meta charSet="utf-8" />
         <RouterHead />
+        <script src="https://unpkg.com/flowbite@1.5.3/dist/flowbite.js"></script>
       </head>
       <body lang="en">
         <RouterOutlet />

@@ -3,6 +3,9 @@
 ## Guides
 
 - [Getting Started](getting-started/index.md)
+- [Installation](getting-started/installation/index.md)
+- [Editor Setup](getting-started/editor-setup/index.md)
+- [Upgrading Guide](getting-started/upgrading-guide/index.md)
 
 ## Advanced
 

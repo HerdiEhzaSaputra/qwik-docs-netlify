@@ -1,17 +1,25 @@
 import { component$, Slot } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
-import Navbar from '~/components/dashboard/navbar/navbar'
-import Sidebar from '~/components/dashboard/sidebar/sidebar';
+import Navbar from '@/components/dashboard/navbar/navbar'
+import Sidebar from '@/components/dashboard/sidebar/sidebar';
 
 export default component$(() => {
 
   return (
-    <div>
-      <Sidebar />
-        <div class="ml-auto mb-6 lg:w-[75%] xl:w-[80%] 2xl:w-[85%]">
-          <Navbar/>
+    <div class="flex h-screen overflow-hidden">
+
+      <Sidebar/>
+
+      <div class="relative flex flex-col flex-1 overflow-y-hidden overflow-x-hidden">
+
+        <Navbar/>
+
+        <main class="overflow-y-auto py-4">
           <Slot />
-        </div>
+        </main>
+
+      </div>
+
     </div>
   );
 });
@@ -19,5 +27,12 @@ export default component$(() => {
 export const head: DocumentHead = ({ head }) => {
   return {
     title: `${head.title} - Documentation`,
+    meta: [],
+    links: [
+      {
+        "src": "https://unpkg.com/flowbite@1.5.3/dist/flowbite.js",
+      }
+    ],
+    styles: [],
   };
 };
