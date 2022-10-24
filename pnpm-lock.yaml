@@ -2,7 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@builder.io/qwik': 0.11.1
-  '@builder.io/qwik-city': 0.0.117
+  '@builder.io/qwik-city': 0.0.112
   '@types/eslint': 8.4.6
   '@types/node': latest
   '@typescript-eslint/eslint-plugin': 5.40.1
@@ -20,9 +20,9 @@ specifiers:
 
 devDependencies:
   '@builder.io/qwik': 0.11.1
-  '@builder.io/qwik-city': 0.0.117
+  '@builder.io/qwik-city': 0.0.112
   '@types/eslint': 8.4.6
-  '@types/node': 18.11.3
+  '@types/node': 18.11.4
   '@typescript-eslint/eslint-plugin': 5.40.1_ukgdydjtebaxmxfqp5v5ulh64y
   '@typescript-eslint/parser': 5.40.1_z4bbprzjrhnsfa24uvmcbu7f5q
   autoprefixer: 10.4.11_postcss@8.4.18
@@ -31,18 +31,18 @@ devDependencies:
   node-fetch: 3.2.10
   postcss: 8.4.18
   prettier: 2.7.1
-  tailwindcss: 3.2.1
+  tailwindcss: 3.2.1_postcss@8.4.18
   typescript: 4.8.4
   vite: 3.1.8
   vite-tsconfig-paths: 3.5.0_vite@3.1.8
 
 packages:
 
-  /@builder.io/qwik-city/0.0.117:
-    resolution: {integrity: sha512-9jmwudywXd8jjopzmz41OYD0qMendy+SyrATBqtBVL3nBXxt7MxjBvjGrY0IKEF6G+U9xSfLRObfGNByijoe8A==}
+  /@builder.io/qwik-city/0.0.112:
+    resolution: {integrity: sha512-fHkmfdBPo3rghVRVeZm84S+GGNi2MdikP18MYkMexVDm1RiDe3Bg3BrZQ4A+YqG465W83Ouu+fY399OZeCkcLw==}
     dependencies:
-      '@mdx-js/mdx': 2.1.5
-      '@types/mdx': 2.0.3
+      '@mdx-js/mdx': 2.1.3
+      '@types/mdx': 2.0.2
       source-map: 0.7.4
       vfile: 5.3.5
     transitivePeerDependencies:
@@ -114,8 +114,8 @@ packages:
     resolution: {integrity: sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==}
     dev: true
 
-  /@mdx-js/mdx/2.1.5:
-    resolution: {integrity: sha512-zEG0lt+Bl/r5U6e0TOS7qDbsXICtemfAPquxWFsMbdzrvlWaqMGemLl+sjVpqlyaaiCiGVQBSGdCk0t1qXjkQg==}
+  /@mdx-js/mdx/2.1.3:
+    resolution: {integrity: sha512-ahbb47HJIJ4xnifaL06tDJiSyLEy1EhFAStO7RZIm3GTa7yGW3NGhZaj+GUCveFgl5oI54pY4BgiLmYm97y+zg==}
     dependencies:
       '@types/estree-jsx': 1.0.0
       '@types/mdx': 2.0.3
@@ -204,6 +204,10 @@ packages:
       '@types/unist': 2.0.6
     dev: true
 
+  /@types/mdx/2.0.2:
+    resolution: {integrity: sha512-mJGfgj4aWpiKb8C0nnJJchs1sHBHn0HugkVfqqyQi7Wn6mBRksLeQsPOFvih/Pu8L1vlDzfe/LidhVHBeUk3aQ==}
+    dev: true
+
   /@types/mdx/2.0.3:
     resolution: {integrity: sha512-IgHxcT3RC8LzFLhKwP3gbMPeaK7BM9eBH46OdapPA7yvuIUJ8H6zHZV53J8hGZcTSnt95jANt+rTBNUUc22ACQ==}
     dev: true
@@ -212,8 +216,8 @@ packages:
     resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
     dev: true
 
-  /@types/node/18.11.3:
-    resolution: {integrity: sha512-fNjDQzzOsZeKZu5NATgXUPsaFaTxeRgFXoosrHivTl8RGeV733OLawXsGfEk9a8/tySyZUyiZ6E8LcjPFZ2y1A==}
+  /@types/node/18.11.4:
+    resolution: {integrity: sha512-BxcJpBu8D3kv/GZkx/gSMz6VnTJREBj/4lbzYOQueUOELkt8WrO6zAcSPmp9uRPEW/d+lUO8QK0W2xnS1hEU0A==}
     dev: true
 
   /@types/semver/7.3.12:
@@ -2284,10 +2288,12 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /tailwindcss/3.2.1:
+  /tailwindcss/3.2.1_postcss@8.4.18:
     resolution: {integrity: sha512-Uw+GVSxp5CM48krnjHObqoOwlCt5Qo6nw1jlCRwfGy68dSYb/LwS9ZFidYGRiM+w6rMawkZiu1mEMAsHYAfoLg==}
     engines: {node: '>=12.13.0'}
     hasBin: true
+    peerDependencies:
+      postcss: ^8.0.9
     dependencies:
       arg: 5.0.2
       chokidar: 3.5.3
